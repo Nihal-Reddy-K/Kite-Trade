@@ -23,16 +23,16 @@ function Footer() {
             <p>All rights reserved.</p>
 
             <div className="social-icons mt-3">
-              <a href="">
+              <a href="#!">
                 <FaXTwitter />
               </a>
-              <a href="">
+              <a href="#!">
                 <FaFacebookSquare />
               </a>
-              <a href="">
+              <a href="#!">
                 <FaInstagram />
               </a>
-              <a href="">
+              <a href="#!">
                 <FaLinkedinIn />
               </a>
             </div>
@@ -40,13 +40,13 @@ function Footer() {
             <hr />
 
             <div className="social-icons">
-              <a href="">
+              <a href="#!">
                 <FaYoutube />
               </a>
-              <a href="">
+              <a href="#!">
                 <FaWhatsapp />
               </a>
-              <a href="">
+              <a href="#!">
                 <FaTelegramPlane />
               </a>
             </div>
@@ -59,78 +59,78 @@ function Footer() {
 
           <div className="col">
             <p>Account</p>
-            <a href="">Open demat account</a>
+            <a href="#!">Open demat account</a>
             <br />
-            <a href="">Minor demat account</a>
+            <a href="#!">Minor demat account</a>
             <br />
-            <a href="">NRI demat account</a>
+            <a href="#!">NRI demat account</a>
             <br />
-            <a href="">HUF demat account</a>
+            <a href="#!">HUF demat account</a>
             <br />
-            <a href="">Commodity</a>
+            <a href="#!">Commodity</a>
             <br />
-            <a href="">Dematerialisation</a>
+            <a href="#!">Dematerialisation</a>
             <br />
-            <a href="">Fund transfer</a>
+            <a href="#!">Fund transfer</a>
             <br />
-            <a href="">MTF</a>
+            <a href="#!">MTF</a>
           </div>
 
           <div className="col">
             <p>Support</p>
-            <a href="">Contact us</a>
+            <a href="#!">Contact us</a>
             <br />
-            <a href="">Support portal</a>
+            <a href="#!">Support portal</a>
             <br />
-            <a href="">How to file a complaint?</a>
+            <a href="#!">How to file a complaint?</a>
             <br />
-            <a href="">Status of your complaints</a>
+            <a href="#!">Status of your complaints</a>
             <br />
-            <a href="">Bulletin</a>
+            <a href="#!">Bulletin</a>
             <br />
-            <a href="">Circular</a>
+            <a href="#!">Circular</a>
             <br />
-            <a href="">Z-Connect blog</a>
+            <a href="#!">Z-Connect blog</a>
             <br />
-            <a href="">Downloads</a>
+            <a href="#!">Downloads</a>
           </div>
 
           <div className="col">
             <p>Company</p>
-            <a href="">About</a>
+            <a href="#!">About</a>
             <br />
-            <a href="">Philosophy</a>
+            <a href="#!">Philosophy</a>
             <br />
-            <a href="">Press & media</a>
+            <a href="#!">Press & media</a>
             <br />
-            <a href="">Careers</a>
+            <a href="#!">Careers</a>
             <br />
-            <a href="">Zerodha Cares (CSR)</a>
+            <a href="#!">Zerodha Cares (CSR)</a>
             <br />
-            <a href="">Zerodha.tech</a>
+            <a href="#!">Zerodha.tech</a>
             <br />
-            <a href="">Open source</a>
+            <a href="#!">Open source</a>
             <br />
-            <a href="">Referral program</a>
+            <a href="#!">Referral program</a>
           </div>
 
           <div className="col">
             <p>Quick links</p>
-            <a href="">Upcoming IPOs</a>
+            <a href="#!">Upcoming IPOs</a>
             <br />
-            <a href="">Brokerage charges</a>
+            <a href="#!">Brokerage charges</a>
             <br />
-            <a href="">Market holidays</a>
+            <a href="#!">Market holidays</a>
             <br />
-            <a href="">Economic calendar</a>
+            <a href="#!">Economic calendar</a>
             <br />
-            <a href="">Calculators</a>
+            <a href="#!">Calculators</a>
             <br />
-            <a href="">Markets</a>
+            <a href="#!">Markets</a>
             <br />
-            <a href="">Sectors</a>
+            <a href="#!">Sectors</a>
             <br />
-            <a href="">Gift Nifty</a>
+            <a href="#!">Gift Nifty</a>
           </div>
         </div>
         <div className="mt-5 text-muted" style={{ fontSize: "11px" }}>
@@ -218,15 +218,15 @@ function Footer() {
         </div>
       </div>
       <div className="mt-4 pt-3 text-center small-links">
-        <a href="">NSE</a>&nbsp;&nbsp;
-        <a href="">BSE</a>&nbsp;&nbsp;
-        <a href="">MCX</a>&nbsp;&nbsp;
-        <a href="">Terms & conditions</a>&nbsp;&nbsp;
-        <a href="">Policies & procedures</a>&nbsp;&nbsp;
-        <a href="">Privacy policy</a>&nbsp;&nbsp;
-        <a href="">Disclosure</a>&nbsp;&nbsp;
-        <a href="">For investor's attention</a>&nbsp;&nbsp;
-        <a href="">Investor charter</a>
+        <a href="#!">NSE</a>&nbsp;&nbsp;
+        <a href="#!">BSE</a>&nbsp;&nbsp;
+        <a href="#!">MCX</a>&nbsp;&nbsp;
+        <a href="#!">Terms & conditions</a>&nbsp;&nbsp;
+        <a href="#!">Policies & procedures</a>&nbsp;&nbsp;
+        <a href="#!">Privacy policy</a>&nbsp;&nbsp;
+        <a href="#!">Disclosure</a>&nbsp;&nbsp;
+        <a href="#!">For investor's attention</a>&nbsp;&nbsp;
+        <a href="#!">Investor charter</a>
       </div>
     </footer>
   );
