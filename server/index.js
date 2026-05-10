@@ -26,6 +26,8 @@ mongoose.connect(MONGO_URL, { serverSelectionTimeoutMS: 30000 })
 
 app.use(
   cors({
+    // Once you deploy to Vercel, add your Vercel URL to this list:
+    // e.g., ["http://localhost:3000", "https://your-app.vercel.app"]
     origin: ["http://localhost:3000", "http://127.0.0.1:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
