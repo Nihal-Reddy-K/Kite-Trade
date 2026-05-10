@@ -26,9 +26,7 @@ mongoose.connect(MONGO_URL, { serverSelectionTimeoutMS: 30000 })
 
 app.use(
   cors({
-    // Once you deploy to Vercel, add your Vercel URL to this list:
-    // e.g., ["http://localhost:3000", "https://your-app.vercel.app"]
-    origin: ["http://localhost:3000", "http://127.0.0.1:3000"],
+    origin: ["http://localhost:3000", "https://kite-frontend-6kvb.onrender.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -139,7 +137,7 @@ app.get("/summary", async (req, res) => {
       pnlPercent: pnlPercent.toFixed(2),
       holdingsCount: holdings.length,
       balance: funds ? funds.balance : 0,
-      usedMargin: totalInvestment // Used margin is the capital tied up in holdings
+      usedMargin: totalInvestment 
     });
   } catch (error) {
     res.status(500).json({ message: "Error" });
@@ -187,7 +185,7 @@ app.get("/marketData/:symbol", async (req, res) => {
   };
 
   const getSimulatedPrice = (base) => {
-    const change = (Math.random() * 0.2 - 0.1); // +/- 0.1%
+    const change = (Math.random() * 0.2 - 0.1); 
     return base + (base * change / 100);
   };
 
@@ -208,7 +206,6 @@ app.get("/marketData/:symbol", async (req, res) => {
       percentChange = "0.01%";
     }
 
-    // Sync holding price for summary accuracy
     await HoldingsModel.updateOne({ name: symbol }, { $set: { price: price } });
 
     res.json({ price, change, percentChange });

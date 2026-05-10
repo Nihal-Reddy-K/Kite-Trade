@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
-import "./api"; // This initializes the axios config
+import "./api"; 
 
 import TopNav from './landing_page/TopNav';
 import Footer from './landing_page/Footer';
