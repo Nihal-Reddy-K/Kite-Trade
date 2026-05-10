@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #387ed1;
+  --success: #4caf50;
+  --danger: #f44336;
+  --text-dark: #424242;
+  --text-muted: #9ba6b2;
+  --bg-app: #ffffff;
+  --bg-sidebar: #ffffff;
+  --border: #f1f3f6;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-app-root {
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  background-color: var(--bg-app);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout */
+.dashboard-layout {
+  display: flex !important;
+  height: calc(100vh - 65px) !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+/* Premium TopBar */
+.topbar-container {
+  height: 65px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.market-indices {
+  display: flex;
+  gap: 30px;
+  margin-left: 40px;
+  border-left: 1px solid var(--border);
+  padding-left: 30px;
+}
+
+.index-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.index-name {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.loss { color: var(--danger); }
+.profit { color: var(--success); }
+
+.percent-loss {
+  color: var(--danger);
+  font-weight: 500;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+}
+
+.profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.profile-trigger:hover {
+  background: #f8f9fa;
+}
+
+.user-icon {
+  font-size: 32px !important;
+  color: #666;
+}
+
+/* Profile Dropdown */
+.profile-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  min-width: 220px;
+  overflow: hidden;
+  z-index: 3000;
+}
+
+.dropdown-header {
+  padding: 15px 20px;
+  background: #fcfcfd;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-header strong { font-size: 14px; color: #333; }
+.dropdown-header span { font-size: 12px; color: var(--text-muted); }
+
+.dropdown-item {
+  display: block;
+  padding: 12px 20px;
+  font-size: 13px;
+  color: #444;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover { background: #f8f9fa; color: var(--primary); }
+.dropdown-item.logout { color: var(--danger); border-top: 1px solid var(--border); margin-top: 5px; cursor: pointer; }
+
+/* WatchList Refinement */
+.watchlist-container {
+  width: 400px !important;
+  height: 100% !important;
+  background: #fff;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container {
+  padding: 15px 25px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+.watchlist {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.watchlist li {
+  list-style: none !important;
+  padding: 15px 25px !important;
+  border-bottom: 1px solid var(--border) !important;
+  cursor: pointer;
+  position: relative;
+  display: block !important;
+}
+
+.watchlist li:hover {
+  background: #fcfcfd;
+}
+
+.stock {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100%;
+}
+
+.stock-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Content Area */
+.dashboard-content {
+  padding: 40px 60px;
+  flex: 1;
+  background: #fff;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Premium Cards */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.summary-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 25px;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+  border-color: #e0e4e9;
+}
+
+/* Navigation Menu */
+.menus ul {
+  list-style: none !important;
+  display: flex !important;
+  gap: 30px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.menu {
+  text-decoration: none !important;
+  color: #666 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 22px 0 !important;
+  display: block !important;
+  transition: color 0.2s !important;
+  border-bottom: 2px solid transparent !important;
+}
+
+.menu:hover { color: var(--primary) !important; }
+.menu.selected { color: var(--primary) !important; border-bottom-color: var(--primary) !important; }
+
+/* Tables */
+.table-container {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #fcfcfd;
+  padding: 15px 25px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+td {
+  padding: 15px 25px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profit { color: var(--success) !important; }
+.loss { color: var(--danger) !important; }
+
+/* Buttons */
+.btn-buy, .btn-sell {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-buy { background: var(--primary) !important; color: #fff !important; }
+.btn-sell { background: var(--danger) !important; color: #fff !important; }
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
