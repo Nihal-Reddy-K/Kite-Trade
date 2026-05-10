@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { KeyboardArrowUp, KeyboardArrowDown, BarChartOutlined, MoreHoriz } from "@mui/icons-material";
+import { KeyboardArrowUp, KeyboardArrowDown, BarChartOutlined } from "@mui/icons-material";
 import { Tooltip, Grow } from "@mui/material";
 import BuyActionWindow from "./BuyActionWindow";
 import SellActionWindow from "./SellActionWindow";
@@ -41,7 +41,7 @@ function WatchList() {
       </div>
 
       <ul className="watchlist">
-        {filteredStocks.map((stock, index) => (
+        {filteredStocks.map((stock) => (
           <WatchListItem stock={stock} key={stock.name} />
         ))}
       </ul>
