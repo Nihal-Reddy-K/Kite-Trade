@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
-import axios from "axios";
+import "./api"; // This initializes the axios config
 
 import TopNav from './landing_page/TopNav';
 import Footer from './landing_page/Footer';
@@ -17,10 +17,6 @@ import SupportPage from "./landing_page/support/SupportPage";
 import NotFound from "./landing_page/NotFound";
 
 import DashboardApp from "./dashboard_app/Apps";
-
-// Move axios config below all imports to satisfy ESLint
-axios.defaults.baseURL = process.env.REACT_APP_API_URL || "http://localhost:3002";
-axios.defaults.withCredentials = true;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
