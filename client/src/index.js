@@ -4,9 +4,6 @@ import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 import "./index.css";
 import axios from "axios";
 
-axios.defaults.baseURL = process.env.REACT_APP_API_URL || "http://localhost:3002";
-axios.defaults.withCredentials = true;
-
 import TopNav from './landing_page/TopNav';
 import Footer from './landing_page/Footer';
 
@@ -20,6 +17,10 @@ import SupportPage from "./landing_page/support/SupportPage";
 import NotFound from "./landing_page/NotFound";
 
 import DashboardApp from "./dashboard_app/Apps";
+
+// Move axios config below all imports to satisfy ESLint
+axios.defaults.baseURL = process.env.REACT_APP_API_URL || "http://localhost:3002";
+axios.defaults.withCredentials = true;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
