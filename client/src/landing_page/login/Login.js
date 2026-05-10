@@ -25,7 +25,8 @@ function Login() {
     const timeoutId = setTimeout(() => controller.abort(), 6000);
 
     try {
-      const response = await fetch("/login", {
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3002";
+      const response = await fetch(`${apiUrl}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

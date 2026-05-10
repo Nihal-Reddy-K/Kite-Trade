@@ -27,8 +27,8 @@ function Signup() {
     const timeoutId = setTimeout(() => controller.abort(), 6000);
 
     try {
-      // Using relative path to rely on React's proxy in package.json
-      const response = await fetch("/signup", {
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3002";
+      const response = await fetch(`${apiUrl}/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
